@@ -30,27 +30,27 @@
     			}
 		#l1{
 			margin-right:310px;
-			
+
 			}
 		#l2{
 			float:right;
 			margin-right:270px;
-			margin-top:-13px;	
+			margin-top:-13px;
 			}
 		#l3{
 			margin-right:200px;
 			margin-top:-16px;
-			
+
 			}
 		#l4{
-			
+
 			float:right;
 			margin-right:145px;
 			margin-top:-19px;
 			}
 		#l5{
 			margin-right:310px;
-			
+
 			}
 		#l6{
 			float:right;
@@ -76,11 +76,11 @@
 			margin-top:-19px;
 			}
 		#l11{
-			
+
 			margin-right:305px;
 			margin-top:-7px;
 			}
-		
+
 		#l12{
 			float:right;
 			margin-right:78px;
@@ -90,42 +90,27 @@
 			margin-right:78px;
 			margin-top:-17px;
 			}
-		
+
 	</style>
 </head>
 <body bgcolor="lightblue"><br><br><br>
-	<h1><center>Register Student Details</center></h1>
+	<h1><center> Search Student Details</center></h1>
     <br><br>
     {% if error %}
         <h2 style="color:red"><center>{{ error}}</center></h2>
     {% endif %}
-    <br>
 	<form action="" method="POST">
          {% csrf_token %}
 	<div class="form">
-		<label>Full Name</label>
-		<input type="text" name="lname" placeholder="Lastname">
-		<input type="text" name="fname" placeholder="Firstname"><br><br>
+
 		<label>Roll Number</label>
 		<input type="text" name="roll" placeholder="Your Roll" size="45"><br><br>
-		<label>Email</label>
-		<input type="text" name="email" placeholder="email@example.com" size="45"><br><br>
-		<label>Phone number</label>
-		<input type="text" name="phone" placeholder="+xxxxxxxxxxxx" size="45"><br><br>
-		<label>Department</label>
-		<input type="text" name="dept" placeholder="Department" size="45"><br><br>
-        <label>Batch</label>
-		<input type="text" name="batch" placeholder="Batch" size="45"><br><br>
-		<label>Section</label>
-		<input type="text" name="sec" placeholder="Section" size="45"><br><br><br>
-		<input id="l11"type="checkbox" name="tc" value="Yes">
-		<label id="l12">I agree with <span style="color:blue;">Terms and Conditions</span></label><br><br>
-	</div>	
-		<center><input type="submit" value="Register"></center>
+
+	</div>
+		<center><input type="submit" value="Search"></center>
 	</form>
-		
-	
+
+
 </body>
 </html>
-		
-		
+

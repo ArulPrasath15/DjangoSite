@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome for Form submission</title>
+</head>
+<body>
+    <p>You searched for: <strong>{{ query }}</strong></p>
+{% if names %}
+<p>Found {{ names|length }} name {{ names|pluralize }}.</p>
+<ul>
+{% for name in names %}
+<li>{{ name }}</li>
+{% endfor %}
+</ul>
+{% else %}
+<p>No fname matched your search criteria.</p>
+{% endif %}
+
+</body>
+</html>

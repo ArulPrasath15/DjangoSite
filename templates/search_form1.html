@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Search</title>
+</head>
+<body>
+
+<!--
+{% if error %}
+<p style="color: red;">Please submit a search term (with less tahn 4 characters).</p>
+{% endif %}
+-->
+
+{% if error %}
+<ul>
+{% for err in error %}
+<li>{{ err }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+<form action="/search/" method="get">
+<input type="text" name="fname">
+<input type="submit" value="Search">
+</form>
+</body>
+</html>

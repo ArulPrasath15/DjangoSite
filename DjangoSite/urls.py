@@ -25,7 +25,13 @@ urlpatterns = [
     path('resume',views.resume, name="homepage"),
     path('', views.index, name="homepage"),
     path('form',views.form,name="Form"),
-    path('age', views.age, name="Form"),
+    path('find',views.search,name="search"),
+    path('update',views.update,name="update"),
+    path('age', views.age, name="age"),
+
+    # path('insert', views.insert),
+    # url(r'^search_form/$', views.search_form),
+    # path('search/', views.search),
 ]
 
 
