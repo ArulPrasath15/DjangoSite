@@ -138,7 +138,7 @@ def update(request):
                 map = {"error": "Roll Number Not Found! "}
                 return render(request, "search.html", map);
         else:
-            data=formdata.__class__.objects.filter(roll=roll).delete()
+            # data=formdata.__class__.objects.filter(roll=roll).delete()
             fname = request.POST['fname']
             lname = request.POST['lname']
             email = request.POST['email']
@@ -148,16 +148,7 @@ def update(request):
             sec = request.POST['sec']
             str = " Updated Succesfully " + roll;
             # str="Name :"+name+" Email  : "+email+" password  : "+password
-            formdata.fname = fname
-            formdata.lname = lname
-            formdata.roll = roll
-            formdata.email = email
-            formdata.phone = phone
-            formdata.roll = roll
-            formdata.dept = dept
-            formdata.batch = batch
-            formdata.sec = sec
-            formdata.save()
+            formdata.__class__.objects.filter(roll=roll).update(fname=fname,lname=lname,email=email,phone=phone,dept=dept,batch=batch,sec=sec,)
             return HttpResponse(str);
 
     return render(request,"search1.html")
